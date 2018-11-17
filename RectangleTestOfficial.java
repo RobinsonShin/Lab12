@@ -29,7 +29,7 @@ public class RectangleTestOfficial
      * Right number of points?
      */
     @Test
-    public void testSquareConstructorPointsArrayLength()
+    public void testRectangleConstructorPointsArrayLength()
     {
         Point[] pts = rec1.getLocation();
         Assert.assertEquals(4, pts.length);
@@ -39,26 +39,26 @@ public class RectangleTestOfficial
      * Check points
      */
     @Test
-    public void testSquareConstructorCalculatedPoints()
+    public void testRectangleConstructorCalculatedPoints()
     {
         Point[] pts1 = rec1.getLocation();
-        Assert.assertTrue("Expected point not appearing in Sqaure. Make sure that the rectangle is centered "
+        Assert.assertTrue("Expected point not appearing in Rectangle. Make sure that the rectangle is centered "
                 + "and uses the width and height correctly.", ShapeUtils.pointInSet(pts1, rec1UL));
-        Assert.assertTrue("Expected point not appearing in Sqaure. Make sure that the rectangle is centered "
+        Assert.assertTrue("Expected point not appearing in Rectangle. Make sure that the rectangle is centered "
                 + "and uses the width and height correctly.", ShapeUtils.pointInSet(pts1, rec1LL));
-        Assert.assertTrue("Expected point not appearing in Sqaure. Make sure that the rectangle is centered "
+        Assert.assertTrue("Expected point not appearing in Rectangle. Make sure that the rectangle is centered "
                 + "and uses the width and height correctly.", ShapeUtils.pointInSet(pts1, rec1LR));
-        Assert.assertTrue("Expected point not appearing in Sqaure. Make sure that the rectangle is centered "
+        Assert.assertTrue("Expected point not appearing in Rectangle. Make sure that the rectangle is centered "
                 + "and uses the width and height correctly.", ShapeUtils.pointInSet(pts1, rec1UR));
         
         Point[] pts2 = rec2.getLocation();
-        Assert.assertTrue("Expected point not appearing in Sqaure. Make sure that the rectangle is centered "
+        Assert.assertTrue("Expected point not appearing in Rectangle. Make sure that the rectangle is centered "
                 + "and uses the width and height correctly.", ShapeUtils.pointInSet(pts2, rec2UL));
-        Assert.assertTrue("Expected point not appearing in Sqaure. Make sure that the rectangle is centered "
+        Assert.assertTrue("Expected point not appearing in Rectangle. Make sure that the rectangle is centered "
                 + "and uses the width and height correctly.", ShapeUtils.pointInSet(pts2, rec2LL));
-        Assert.assertTrue("Expected point not appearing in Sqaure. Make sure that the rectangle is centered "
+        Assert.assertTrue("Expected point not appearing in Rectangle. Make sure that the rectangle is centered "
                 + "and uses the width and height correctly.", ShapeUtils.pointInSet(pts2, rec2LR));
-        Assert.assertTrue("Expected point not appearing in Sqaure. Make sure that the rectangle is centered "
+        Assert.assertTrue("Expected point not appearing in Rectangle. Make sure that the rectangle is centered "
                 + "and uses the width and height correctly.", ShapeUtils.pointInSet(pts2, rec2UR));
         
     }
@@ -67,29 +67,29 @@ public class RectangleTestOfficial
      * Unfilled case
      */
     @Test
-    public void testSquareConstructorUnfilled()
+    public void testRectangleConstructorUnfilled()
     {
-        Assert.assertFalse("Square fill incorrect.", rec2.isFilled());
+        Assert.assertFalse("Rectangle fill incorrect.", rec2.isFilled());
     }
     
     /**
      * Filled case
      */
     @Test
-    public void testSquareConstructorFilled()
+    public void testRectangleConstructorFilled()
     {
-        Assert.assertTrue("Square fill incorrect.", rec1.isFilled());
+        Assert.assertTrue("Rectangle fill incorrect.", rec1.isFilled());
     }
     
     /**
      * Color
      */
     @Test
-    public void testSquareConstructorColor()
+    public void testRectangleConstructorColor()
     {
         Color clr1 = rec1.getColor();
         Color clr2 = rec2.getColor();
-        Assert.assertEquals("Square color incorrect.", Color.BLACK, clr1);
-        Assert.assertEquals("Square color incorrect.", Color.CYAN, clr2);
+        Assert.assertEquals("Rectangle color incorrect.", Color.BLACK, clr1);
+        Assert.assertEquals("Rectangle color incorrect.", Color.CYAN, clr2);
     }
 }
