@@ -5,9 +5,9 @@ import java.awt.Point;
 /**
  * This class maintains information for drawing an Oval, and extends Shape.
  * 
- * @author Stephen
- * @version 2018-04-02
- * Lab 11
+ * @author Stephen, Robinson Shin
+ * @version 2018-11-16
+ * Lab 12
  */
 public class Oval extends Shape
 {
@@ -82,8 +82,6 @@ public class Oval extends Shape
         // TODO: define how to draw an oval. Remember that the point stored is the center point.
         int radius1 = diameter1/2;
         int radius2 = diameter2/2;
-        
-        graphics.drawOval(radius1, radius1, radius2, radius2);
                
         // Render depending on whether it is filled or not.
         if (this.isFilled())
