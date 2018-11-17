@@ -50,6 +50,9 @@ public class DrawFrame extends JFrame
         Oval rightEyeInner = new Oval(new Point(515,240), 35, 75, Color.BLACK, true);
         // Nose and Whiskers:
         Circle nose = new Circle(new Point(400,300), 50, Color.BLACK, true);
+        PolyLine mouthLeft = new PolyLine(new Point(300,360), new Point(400,380), 40, Color.BLACK, true);
+        PolyLine mouthRight = new PolyLine(new Point(400,380), new Point(500,360), 40, Color.BLACK, true);
+        Oval tongue = new Oval(new Point(420,420), 40, 60, Color.RED, true);
         
         // Collar:
         Oval collarBase = new Oval(new Point(400,500), 400, 50, Color.BLUE, true);
@@ -58,6 +61,9 @@ public class DrawFrame extends JFrame
         
         // Square around the dog:
         Square squareOutline = new Square(new Point(400,300), 500, Color.MAGENTA, false);
+        
+        // Circle around the dog
+        Circle circleOutline = new Circle(new Point(400,300), 707, Color.BLACK, false);
         
         // initialize the panel and add the shapes to it
         drawPanel = new DrawPanel();
@@ -73,10 +79,14 @@ public class DrawFrame extends JFrame
         drawPanel.addShape(rightEyeOuter);
         drawPanel.addShape(rightEyeInner);
         drawPanel.addShape(nose);
+        drawPanel.addShape(mouthLeft);
+        drawPanel.addShape(mouthRight);
+        drawPanel.addShape(tongue);
         drawPanel.addShape(collarBase);
         drawPanel.addShape(collarCircleBase);
         drawPanel.addShape(collarCircleOutline);
         drawPanel.addShape(squareOutline);
+        drawPanel.addShape(circleOutline);
         
         // set background color
         drawPanel.setBackground(Color.YELLOW);
